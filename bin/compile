@@ -17,7 +17,7 @@ mkdir -p /app/.appknox/vendor
 
 curl $SOURCE_TARBALL -s | tar zxv -C .appknox/vendor &> /dev/null
 
-cd libffi-3.1
+cd .appknox/vendor/libffi-3.1
 ./autogen.sh
 ./configure --prefix=$OUT_PREFIX --disable-static && make && make install
 
