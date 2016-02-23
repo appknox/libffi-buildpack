@@ -15,10 +15,10 @@ PKG_CONFIG_PATH="/app/.appknox/vendor/lib/pkgconfig:$PKG_CONFIG_PATH"
 
 mkdir -p /app/.appknox/vendor
 
-curl $SOURCE_TARBALL -s | tar zxv -C .appknox/vendor &> /dev/null
+curl $SOURCE_TARBALL -s | tar zxv -C /app/.appknox/vendor/ &> /dev/null
 
-cd .appknox/vendor/libffi-3.1
+cd /app/.appknox/vendor/libffi-3.1
 ./autogen.sh
 ./configure --prefix=$OUT_PREFIX --disable-static && make && make install
 
-cd ..
+cd 
